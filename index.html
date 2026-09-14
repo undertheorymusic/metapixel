@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+	<!-- Meta Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '922008707646762');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=922008707646762&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Meta Pixel Code -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Theory // Official Hub</title>
     <!-- Google Fonts untuk kesan majalah lama / typewriter -->
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
-
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '922008707646762');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=922008707646762&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <style>
         * {
             margin: 0;
@@ -264,7 +263,7 @@
         <section>
             <div class="section-title">// Stream Links</div>
             <div class="link-grid">
-                <a href="https://open.spotify.com/artist/1AujrTfyIKYhlSeOqR4ird" target="_blank" rel="noopener noreferrer" class="magazine-link spotify-conversion-link" data-platform="Spotify">Spotify</a>
+                <a href="https://open.spotify.com/artist/1AujrTfyIKYhlSeOqR4ird" target="_blank" rel="noopener noreferrer" class="magazine-link">Spotify</a>
                 <a href="https://music.apple.com/us/artist/under-theory/6795514773" target="_blank" rel="noopener noreferrer" class="magazine-link">Apple Music</a>
                 <a href="https://www.deezer.com/en/artist/406796162" target="_blank" rel="noopener noreferrer" class="magazine-link">Deezer</a>
                 <a href="https://music.youtube.com/@UnderTheory-Official" target="_blank" rel="noopener noreferrer" class="magazine-link">YouTube Music</a>
@@ -350,22 +349,6 @@
 
         // Console system check
         console.log("%c[UNDER THEORY SYSTEM INITIALIZED]", "color: #ff3333; font-family: monospace; font-size: 14px; font-weight: bold;");
-
-        // --- Meta Pixel: Spotify conversion tracking ---
-        // Fires when someone clicks the Spotify button on this page.
-        // Reported to Meta as a custom event named "SpotifyClick", so you can
-        // build a Custom Conversion from it in Events Manager and use that as
-        // your optimization/conversion event in Ads Manager.
-        document.querySelectorAll('.spotify-conversion-link').forEach(function (link) {
-            link.addEventListener('click', function () {
-                if (typeof fbq === 'function') {
-                    fbq('trackCustom', 'SpotifyClick', {
-                        content_name: 'Under Theory Spotify Button',
-                        platform: link.dataset.platform || 'Spotify'
-                    });
-                }
-            });
-        });
     </script>
 </body>
 </html>
